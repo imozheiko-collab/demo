@@ -86,6 +86,7 @@
   background: #0f1a33;
   border: 1px solid #1c2b4a;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .row {
@@ -158,6 +159,10 @@
   background: #0b1020;
   color: #9fb3d9;
   font-size: 12px;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {

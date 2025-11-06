@@ -17,7 +17,7 @@ export default function HallsView({ movies, halls, showtimes, selectedDate }) {
   const renderHallItem = (h) => {
     const sts = filterUpcoming(filterShowtimesForDate(showtimesByHall.get(h.id) || [], selectedDate))
     return (
-      <div key={h.id} className={styles.listItem} onClick={() => setSelectedHallId(h.id)}>
+      <div key={h.id} className={styles.listItem} title={`View schedule for ${h.name}`} onClick={() => setSelectedHallId(h.id)}>
         <div>
           <strong>{h.name}</strong>
           <div className={styles.muted}>{h.capacity} seats • {h.features.join(', ')}</div>
@@ -96,7 +96,7 @@ export default function HallsView({ movies, halls, showtimes, selectedDate }) {
           })}
 
           <div style={{ marginTop: 12 }}>
-            <button className={styles.dateButton} onClick={() => setSelectedHallId(null)}>Close</button>
+            <button className={styles.dateButton} title="Close" onClick={() => setSelectedHallId(null)}>Close</button>
           </div>
         </div>
       </div>

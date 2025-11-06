@@ -9,6 +9,7 @@ export default function DateFilter({ selectedDate, onChange }) {
         <button
           key={d}
           className={`${styles.dateButton} ${selectedDate === d ? styles.dateButtonActive : ''}`}
+          title={`Select date ${d}`}
           onClick={() => onChange(d)}
         >
           {d}

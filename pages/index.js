@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className={styles.appContainer}>
       <Head>
-        <title>Cinema Schedule Viewer</title>
+        <title>Ivan Mozheiko Demo Cinema App</title>
         <meta name="description" content="Browse movies, halls, and schedules for the next 7 days" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

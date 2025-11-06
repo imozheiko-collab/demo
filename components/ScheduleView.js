@@ -19,7 +19,7 @@ export default function ScheduleView({ movies, halls, showtimes, selectedDate })
     return (
       <div>
         <div className={styles.row} style={{ marginBottom: 12 }}>
-          <select className={styles.dateButton} value={movieId || ''} onChange={e => setMovieId(e.target.value)}>
+          <select className={styles.dateButton} title="Select movie" value={movieId || ''} onChange={e => setMovieId(e.target.value)}>
             {movieOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
@@ -58,7 +58,7 @@ export default function ScheduleView({ movies, halls, showtimes, selectedDate })
     return (
       <div>
         <div className={styles.row} style={{ marginBottom: 12 }}>
-          <select className={styles.dateButton} value={hallId || ''} onChange={e => setHallId(e.target.value)}>
+          <select className={styles.dateButton} title="Select hall" value={hallId || ''} onChange={e => setHallId(e.target.value)}>
             {hallOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
@@ -91,6 +91,7 @@ export default function ScheduleView({ movies, halls, showtimes, selectedDate })
           <button
             key={label}
             className={`${styles.segmentedButton} ${mode === label ? styles.segmentedButtonActive : ''}`}
+            title={`View ${label.toLowerCase()}`}
             onClick={() => setMode(label)}
           >
             {label}

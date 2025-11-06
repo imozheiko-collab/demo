@@ -7,6 +7,7 @@ export default function Tabs({ tabs, active, onChange }) {
         <button
           key={t}
           className={`${styles.tabButton} ${active === t ? styles.tabButtonActive : ''}`}
+          title={`Go to ${t}`}
           onClick={() => onChange(t)}
         >
           {t}

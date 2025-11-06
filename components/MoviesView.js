@@ -22,7 +22,7 @@ export default function MoviesView({ movies, halls, showtimes, selectedDate }) {
     const sts = filterShowtimesForDate(showtimesByMovie.get(m.id) || [], selectedDate)
     const upcoming = filterUpcoming(sts)
     return (
-      <div key={m.id} className={styles.card} onClick={() => setSelectedMovieId(m.id)}>
+      <div key={m.id} className={`${styles.card} ${styles.clickable}`} title={`View details for ${m.title}`} onClick={() => setSelectedMovieId(m.id)}>
         <img className={styles.cover} src={m.coverImage} alt={m.title} onError={(e) => { e.currentTarget.src = PLACEHOLDER }} />
         <div className={styles.cardBody}>
           <div className={styles.row}>
@@ -90,7 +90,7 @@ export default function MoviesView({ movies, halls, showtimes, selectedDate }) {
           )}
 
           <div style={{ marginTop: 12 }}>
-            <button className={styles.dateButton} onClick={() => setSelectedMovieId(null)}>Close</button>
+            <button className={styles.dateButton} title="Close" onClick={() => setSelectedMovieId(null)}>Close</button>
           </div>
         </div>
       </div>
