@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import styles from '../styles/Cinema.module.css'
 import { filterShowtimesForDate, filterUpcoming, groupByDate } from '../lib/dateUtils'
 
-const PLACEHOLDER = 'https://via.placeholder.com/300x450?text=No+Image'
+const PLACEHOLDER = '/images/placeholder-cover.svg'
 
 export default function MoviesView({ movies, halls, showtimes, selectedDate }) {
   const [selectedMovieId, setSelectedMovieId] = useState(null)

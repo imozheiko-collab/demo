@@ -5,7 +5,7 @@
     "genre": "Sci-Fi",
     "durationMinutes": 128,
     "rating": "PG-13",
-    "coverImage": "https://via.placeholder.com/300x450?text=Starlight+Odyssey",
+    "coverImage": "/images/movies/mv001.svg",
     "description": "A crew of explorers travel beyond known space to uncover the origins of a mysterious signal."
   },
   {
@@ -14,7 +14,7 @@
     "genre": "Drama",
     "durationMinutes": 114,
     "rating": "PG",
-    "coverImage": "https://via.placeholder.com/300x450?text=The+Last+Encore",
+    "coverImage": "/images/movies/mv002.svg",
     "description": "A retired musician reunites with his estranged daughter for one final performance."
   },
   {
@@ -23,7 +23,7 @@
     "genre": "Action",
     "durationMinutes": 103,
     "rating": "PG-13",
-    "coverImage": "https://via.placeholder.com/300x450?text=Midnight+Heist",
+    "coverImage": "/images/movies/mv003.svg",
     "description": "A team of thieves attempts an impossible job at a high-security museum under the cover of night."
   },
   {
@@ -32,7 +32,7 @@
     "genre": "Romance",
     "durationMinutes": 97,
     "rating": "PG",
-    "coverImage": "https://via.placeholder.com/300x450?text=Winds+of+Autumn",
+    "coverImage": "/images/movies/mv004.svg",
     "description": "Two travelers find unexpected love while stranded in a quaint mountain town."
   },
   {
@@ -41,7 +41,7 @@
     "genre": "Thriller",
     "durationMinutes": 121,
     "rating": "R",
-    "coverImage": "https://via.placeholder.com/300x450?text=Echoes+of+the+Deep",
+    "coverImage": "/images/movies/mv005.svg",
     "description": "A marine biologist discovers a series of disappearances connected to an abandoned offshore facility."
   }
 ]

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2848"/>
+      <stop offset="100%" stop-color="#2d57b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <g fill="#34d399">
+    <circle cx="90" cy="130" r="22"/>
+    <circle cx="150" cy="110" r="16" opacity="0.8"/>
+    <circle cx="200" cy="130" r="20" opacity="0.6"/>
+  </g>
+  <text x="150" y="250" text-anchor="middle" font-size="22" fill="#e8ecf1" font-family="Segoe UI, Arial, sans-serif">Winds of Autumn</text>
+  <text x="150" y="280" text-anchor="middle" font-size="12" fill="#cfe0ff" font-family="Segoe UI, Arial, sans-serif">Romance • PG</text>
+</svg>
+
+
