@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hl001",
+    "name": "Hall 1",
+    "capacity": 150,
+    "features": ["Standard", "Dolby Audio"]
+  },
+  {
+    "id": "hl002",
+    "name": "Hall 2",
+    "capacity": 120,
+    "features": ["3D", "Dolby Atmos"]
+  },
+  {
+    "id": "hl003",
+    "name": "Hall 3",
+    "capacity": 200,
+    "features": ["IMAX", "Laser Projection"]
+  }
+]
+
+

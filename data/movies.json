@@ -1,0 +1,49 @@
+[
+  {
+    "id": "mv001",
+    "title": "Starlight Odyssey",
+    "genre": "Sci-Fi",
+    "durationMinutes": 128,
+    "rating": "PG-13",
+    "coverImage": "https://via.placeholder.com/300x450?text=Starlight+Odyssey",
+    "description": "A crew of explorers travel beyond known space to uncover the origins of a mysterious signal."
+  },
+  {
+    "id": "mv002",
+    "title": "The Last Encore",
+    "genre": "Drama",
+    "durationMinutes": 114,
+    "rating": "PG",
+    "coverImage": "https://via.placeholder.com/300x450?text=The+Last+Encore",
+    "description": "A retired musician reunites with his estranged daughter for one final performance."
+  },
+  {
+    "id": "mv003",
+    "title": "Midnight Heist",
+    "genre": "Action",
+    "durationMinutes": 103,
+    "rating": "PG-13",
+    "coverImage": "https://via.placeholder.com/300x450?text=Midnight+Heist",
+    "description": "A team of thieves attempts an impossible job at a high-security museum under the cover of night."
+  },
+  {
+    "id": "mv004",
+    "title": "Winds of Autumn",
+    "genre": "Romance",
+    "durationMinutes": 97,
+    "rating": "PG",
+    "coverImage": "https://via.placeholder.com/300x450?text=Winds+of+Autumn",
+    "description": "Two travelers find unexpected love while stranded in a quaint mountain town."
+  },
+  {
+    "id": "mv005",
+    "title": "Echoes of the Deep",
+    "genre": "Thriller",
+    "durationMinutes": 121,
+    "rating": "R",
+    "coverImage": "https://via.placeholder.com/300x450?text=Echoes+of+the+Deep",
+    "description": "A marine biologist discovers a series of disappearances connected to an abandoned offshore facility."
+  }
+]
+
+

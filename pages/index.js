@@ -1,77 +1,59 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from 'next/head'
+import { useMemo, useState } from 'react'
+import styles from '../styles/Cinema.module.css'
+import Tabs from '../components/Tabs'
+import DateFilter from '../components/DateFilter'
+import MoviesView from '../components/MoviesView'
+import HallsView from '../components/HallsView'
+import ScheduleView from '../components/ScheduleView'
+import { getTodayYYYYMMDD } from '../lib/dateUtils'
+
+import moviesData from '../data/movies.json'
+import hallsData from '../data/halls.json'
+import showtimesData from '../data/showtimes.json'
+
+const TABS = ['Movies', 'Halls', 'Schedule']
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState('Movies')
+  const [selectedDate, setSelectedDate] = useState(getTodayYYYYMMDD())
+
+  const { movies, halls, showtimes } = useMemo(() => ({
+    movies: moviesData,
+    halls: hallsData,
+    showtimes: showtimesData
+  }), [])
+
   return (
-    <div className={styles.container}>
+    <div className={styles.appContainer}>
       <Head>
-        <title>Demo Project - Welcome</title>
-        <meta name="description" content="A demo test project showcasing GitHub and Vercel deployment" />
+        <title>Cinema Schedule Viewer</title>
+        <meta name="description" content="Browse movies, halls, and schedules for the next 7 days" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <div className={styles.hero}>
-          <h1 className={styles.title}>
-            Welcome to <span className={styles.highlight}>Demo Project</span>
-          </h1>
-          
-          <p className={styles.description}>
-            A demonstration project showcasing GitHub integration and Vercel deployment
-          </p>
+      <main className={styles.content}>
+        <div className={styles.header}>
+          <div className={styles.title}>Cinema Schedule Viewer</div>
+          <DateFilter selectedDate={selectedDate} onChange={setSelectedDate} />
+        </div>
 
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <h2>🚀 Vercel Deployment</h2>
-              <p>
-                This project is deployed on Vercel, providing fast, global CDN delivery
-                and automatic HTTPS.
-              </p>
-            </div>
+        <Tabs tabs={TABS} active={activeTab} onChange={setActiveTab} />
 
-            <div className={styles.card}>
-              <h2>📦 GitHub Integration</h2>
-              <p>
-                Version controlled with Git and hosted on GitHub for seamless
-                collaboration and deployment.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h2>⚡ Next.js Framework</h2>
-              <p>
-                Built with Next.js for optimal performance, SEO, and developer
-                experience.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h2>🎨 Modern Design</h2>
-              <p>
-                Responsive and mobile-friendly design that works on all devices
-                and screen sizes.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.footer}>
-            <p>
-              <strong>Status:</strong> ✅ Successfully deployed and running
-            </p>
-            <p className={styles.links}>
-              <a href="https://github.com/yourusername/demo" target="_blank" rel="noopener noreferrer">
-                View on GitHub
-              </a>
-              {' • '}
-              <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
-                Powered by Vercel
-              </a>
-            </p>
-          </div>
+        <div style={{ marginTop: 16 }}>
+          {activeTab === 'Movies' && (
+            <MoviesView movies={movies} halls={halls} showtimes={showtimes} selectedDate={selectedDate} />
+          )}
+          {activeTab === 'Halls' && (
+            <HallsView movies={movies} halls={halls} showtimes={showtimes} selectedDate={selectedDate} />
+          )}
+          {activeTab === 'Schedule' && (
+            <ScheduleView movies={movies} halls={halls} showtimes={showtimes} selectedDate={selectedDate} />
+          )}
         </div>
       </main>
     </div>
-  );
+  )
 }
 
